@@ -13,8 +13,8 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
                     level=logging.WARNING)
 
 selfbot = TelegramClient("session_id", api_id, api_hash)
-selfbot.start("PHONE NUMBER", 'CLOUD PASSWORD')
-#If you don't have a cloud password, just remove this field, leaving selfbot.start("PHONE NUMBER")
+selfbot.start("PHONE NUMBER")
+#If you have a cloud password, just set field like selfbot.start("PHONE NUMBER", "CLOUD PASSWORD")
 
 def log(user):
     try:
