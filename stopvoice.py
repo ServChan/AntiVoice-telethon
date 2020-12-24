@@ -36,6 +36,10 @@ def log(user):
 
 @selfbot.on(events.NewMessage(incoming=True))
 async def my_event_handler(event):
+  whitelist = [
+        0000000,
+        1111111
+    ]
     sender = await event.get_sender()
     try:
         if (event.chat_id > 0) and (event.message.voice != None):
@@ -43,7 +47,7 @@ async def my_event_handler(event):
     except Exception as exlog:
         print(Fore.RED + "Ошибка обработки лога. " + Back.WHITE + Fore.WHITE + str(exlog))
     try:
-        if event.chat_id > 0:
+        if (event.chat_id > 0) and (event.chat_id not in white_list):
             if (event.message.voice) and (event.message.voice.attributes[0].duration < 10):
                 await event.respond('__Пользователь ограничил функцию голосовых сообщений.__')
                 await selfbot.delete_messages(event.chat_id, [event.id])
