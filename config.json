@@ -1,0 +1,14 @@
+{
+  "api_id": 123456,
+  "api_hash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "session": "stopvoice_session",
+  "phone": "+37100000000",
+  "owner_ids": [123456789],
+  "whitelist_ids": [],
+  "whitelist_usernames": [],
+  "max_duration": 10,
+  "reply_text": "__Пользователь ограничил функцию голосовых сообщений.__",
+  "mode": "warn_then_delete",
+  "private_only": true,
+  "enable": true
+}
